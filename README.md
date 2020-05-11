@@ -1,76 +1,89 @@
-# Front End Test
+# Front End Test - Alelo Frota
 
 ## Objetivo
 
-Criar uma app "To-do list" utilizando Angular 7+ integrando com os endpoints abaixo.
 
-A app deve utilizar rotas, componentes e ter uma tela para cada função.
+## Layout
 
-Deverá ter as opções:
-
-- Listar as categorias
-- Listar e inserir listas
-- Listar, inserir itens e marcar como "feito"
 
 ## Endpoint
 
-`https://5e1f3d7d39f7a80014a5a349.mockapi.io/api/v1/`
+`https://5eb70ac3875f1a00167e1333.mockapi.io/api/vehicle`
 
-## Categories
+`https://5eb70ac3875f1a00167e1333.mockapi.io/api/vehicle?page=1&limit=10`
 
-```json
-{
-  "id": "ID da categoria (Gerado)",
-  "name": "Nome da categoria"
-}
-``` 
+`https://5eb70ac3875f1a00167e1333.mockapi.io/api/vehicle?page=1&limit=10`
 
-`[GET] /categories` Lista categorias
 
-`[GET] /categories/:id` Retorna uma categoria específica
-
-`[POST] /categories` Insere uma categoria
-
-`[PUT] /categories/:id` Atualiza uma categoria
-
-`[DELETE] /categories/:id` Remove uma categoria
-
-## Lists
+#### Vehicle
 
 ```json
 {
-  "id": "ID da lista (Gerado)",
-  "name": "Nome da lista"
-}
+  "id": "1",
+  "plate": "plate 1",
+  "model": "model 1",
+  "manufacturer": "manufacturer 1",
+  "color": "lavender",
+  "status": false
+},
 ``` 
+ 
+`[GET] /vehicle` Lista todos veículos
 
-`[GET] /categories/:idCategory/lists` Lista as listas de uma categoria
+`[GET] /vehicle/:id` Retorna um veículo específico
 
-`[GET] /categories/:idCategory/lists/:id` Retorna uma lista específica de uma categoria
 
-`[POST] /categories/:idCategory/lists` Insere uma lista em uma categoria
+#### Paleta de cores
 
-`[PUT] /categories/:idCategory/lists/:id` Atualiza uma lista de uma categoria
+- Principais
 
-`[DELETE] /categories/:idCategory/lists/:id` Remove uma lista de categoria
+`#BC2F6C` - magenta
+`#282828` - preto
+`#BDD654` - verde claro
+`#0E7F61` - verde escuro
 
-## Items
+- Neutras (do mais escuro pro mais claro)
 
-```json
-{
-  "id": "ID do item (Gerado)",
-  "name": "Nome do item",
-  "done": true,
-}
-``` 
+`#000000`
+`#282828`
+`#555550`
+`#888888`
+`#A3A3A3`
+`#C0C0C0`
+`#DDDDDD`
+`#EDEDED`
+`#F7F7F7`
+`#FFFFFF`
 
-`[GET] /categories/:idCategory/lists/:idList/items` Lista os itens de uma lista
+- Suporte
 
-`[GET] /categories/:idCategory/lists/:idList/items/:id` Retorna um item
+`#BDD654` - Success
+`#BC2F6C` - Error
+`#43A4E6` - Info
+`#FACC05` - Warning
 
-`[POST] /categories/:idCategory/lists/:idList/items` Insere um item em uma lista
+#### Margem e Espaçamento
 
-`[PUT] /categories/:idCategory/lists/:idList/items/:id` Atualiza um item da lista
+- 4px
+- 8px
+- 16px
+- 24px
+- 32px
+- 36px
 
-`[DELETE] /categories/:idCategory/lists/:idList/items/:id` Remove um item
+#### Tamanho de fonte
 
+- 10px
+- 12px
+- 14px (padrão)
+- 18px
+- 20px
+- 24px
+- 42px
+
+### Font-Family
+
+- Open Sans Regular
+- Open Sans Bold
+
+https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans
